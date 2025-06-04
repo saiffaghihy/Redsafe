@@ -1,0 +1,96 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff5f5;
+    color: #2c2c2c;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Header & Navigation */
+  header {
+    background-color: #b30000;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  nav ul.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav ul.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul.nav-links a:hover,
+  nav ul.nav-links a.active {
+    color: #ffdcdc;
+    border-bottom: 2px solid white;
+  }
+  
+  /* Main Container */
+  main.container {
+    flex: 1;
+    padding: 50px 40px;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(179, 0, 0, 0.1);
+  }
+  
+  /* Content Section */
+  .intro h1 {
+    color: #b30000;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .intro p {
+    margin-bottom: 16px;
+    font-size: 1.05rem;
+  }
+  
+  /* Placeholder Box */
+  .placeholder-box {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #ffecec;
+    border: 2px dashed #b30000;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: 500;
+    color: #b30000;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #b30000;
+    color: white;
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 0.9rem;
+  }
+  

@@ -1,0 +1,82 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff8f8;
+    color: #2c2c2c;
+  }
+  
+  header {
+    background-color: #b30000;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+  }
+  
+  .nav-links a:hover,
+  .nav-links a.active {
+    border-bottom: 2px solid white;
+  }
+  
+  .container {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 25px;
+  }
+  
+  .intro h1 {
+    font-size: 36px;
+    color: #b30000;
+    margin-bottom: 15px;
+  }
+  
+  .intro p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+  }
+  
+  .placeholder-box {
+    border: 2px dashed #ccc;
+    padding: 30px;
+    text-align: center;
+    font-style: italic;
+    color: #888;
+    background-color: #fdf2f2;
+    border-radius: 10px;
+  }
+  
+  footer {
+    background-color: #b30000;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 80px;
+    font-size: 14px;
+  }
+  

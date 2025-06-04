@@ -1,0 +1,143 @@
+/* === Reset & Base === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff5f5;
+    color: #222;
+    line-height: 1.7;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  /* === Header & Nav === */
+  header {
+    position: sticky;
+    top: 0;
+    background-color: #c90000;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+  }
+  
+  .nav-links li a {
+    color: white;
+    font-weight: 500;
+    padding: 0.4rem 0.6rem;
+    border-radius: 4px;
+    transition: background 0.2s ease-in-out;
+  }
+  
+  .nav-links li a:hover,
+  .nav-links li a.active {
+    background-color: #ff3333;
+  }
+  
+  /* === Main Content === */
+  .container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  /* Intro Section */
+  .intro h1 {
+    color: #c90000;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .intro p {
+    font-size: 1.05rem;
+    margin-bottom: 1rem;
+    text-align: justify;
+  }
+  
+  /* Song Section */
+  .song-section {
+    margin-top: 3rem;
+    padding: 1.5rem;
+    background-color: #fff;
+    border-left: 5px solid #c90000;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  }
+  
+  .song-section h2 {
+    color: #c90000;
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .song-section p {
+    font-size: 1.05rem;
+    text-align: justify;
+  }
+  
+  /* Episodes Section */
+  .episodes {
+    margin-top: 3rem;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border-left: 5px solid #c90000;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  }
+  
+  .episodes h2 {
+    color: #c90000;
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .episodes p {
+    font-size: 1.05rem;
+    text-align: justify;
+  }
+  
+  /* === Footer === */
+  footer {
+    background-color: #c90000;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.95rem;
+    margin-top: 3rem;
+  }
+  
+  /* === Responsive Nav === */
+  @media (max-width: 768px) {
+    .nav-links {
+      flex-direction: column;
+      gap: 0.8rem;
+      padding-top: 1rem;
+    }
+  }
+  
