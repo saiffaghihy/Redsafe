@@ -1,13 +1,15 @@
-// causes.js
-
 document.addEventListener("DOMContentLoaded", () => {
-    const currentPage = window.location.pathname.split("/").pop();
-    const navLinks = document.querySelectorAll(".nav-links a");
-  
-    navLinks.forEach(link => {
-      if (link.getAttribute("href") === currentPage) {
-        link.classList.add("active");
+  const fadeElements = document.querySelectorAll('.fade-in');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
       }
     });
+  }, {
+    threshold: 0.2
   });
-  
+
+  fadeElements.forEach(el => observer.observe(el));
+});

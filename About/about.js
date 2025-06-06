@@ -1,13 +1,15 @@
-// Highlight active nav link based on current page
 document.addEventListener("DOMContentLoaded", () => {
-    const navLinks = document.querySelectorAll(".nav-links a");
-    const currentPage = window.location.pathname.split("/").pop();
-  
-    navLinks.forEach(link => {
-      const linkPage = link.getAttribute("href");
-      if (linkPage === currentPage) {
-        link.classList.add("active");
+  const fadeElements = document.querySelectorAll('.fade-in');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
       }
     });
+  }, {
+    threshold: 0.2
   });
-  
+
+  fadeElements.forEach(el => observer.observe(el));
+});

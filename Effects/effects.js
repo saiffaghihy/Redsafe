@@ -1,14 +1,15 @@
-// effects.js
+document.addEventListener("DOMContentLoaded", () => {
+  const fadeElements = document.querySelectorAll('.fade-in');
 
-// Highlight current nav link based on URL
-document.addEventListener("DOMContentLoaded", function () {
-    const navLinks = document.querySelectorAll(".nav-links a");
-    const currentPath = window.location.pathname;
-  
-    navLinks.forEach(link => {
-      if (link.href.includes(currentPath.split("/").pop())) {
-        link.classList.add("active");
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
       }
     });
+  }, {
+    threshold: 0.2
   });
-  
+
+  fadeElements.forEach(el => observer.observe(el));
+});

@@ -1,13 +1,17 @@
-// Highlight active nav link based on current page
-document.addEventListener("DOMContentLoaded", () => {
-    const navLinks = document.querySelectorAll(".nav-links a");
-    const currentPage = window.location.pathname.split("/").pop();
-  
-    navLinks.forEach(link => {
-      const linkPage = link.getAttribute("href");
-      if (linkPage === currentPage) {
-        link.classList.add("active");
-      }
-    });
+// Simple animation on scroll for team bios
+const sections = document.querySelectorAll('.person-section');
+
+const appearOnScroll = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('fade-in');
+      observer.unobserve(entry.target);
+    }
   });
-  
+}, {
+  threshold: 0.1
+});
+
+sections.forEach(section => {
+  appearOnScroll.observe(section);
+});

@@ -1,0 +1,113 @@
+/* Reset + Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #fff5f5;
+    color: #333;
+    scroll-behavior: smooth;
+  }
+  
+  /* Hero Image */
+  .hero-image img.banner-image {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    filter: brightness(0.8) sepia(0.1) hue-rotate(-10deg) saturate(2);
+  }
+  
+  /* Header */
+  header {
+    position: sticky;
+    top: 0;
+    background-color: #b30000;
+    color: white;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .site-title {
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+    background-color: #ff4d4d;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #cc0000;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0.75rem 1rem;
+  }
+  
+  .navbar li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: color 0.3s, transform 0.2s;
+  }
+  
+  .navbar li a:hover {
+    color: #ffcccc;
+    transform: scale(1.05);
+  }
+  
+  /* Content Area */
+  .content {
+    padding: 2rem 10%;
+  }
+  
+  .intro p,
+  .form-section p,
+  .image-placeholder p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+  
+  h2, h3 {
+    color: #b30000;
+    margin-bottom: 1rem;
+  }
+  
+  /* Form Section */
+  .form-embed iframe {
+    width: 100%;
+    border: none;
+    margin-top: 1rem;
+  }
+  
+  /* Responsive Image Section */
+  .image-placeholder img.responsive-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #b30000;
+    color: white;
+    margin-top: 3rem;
+    font-size: 0.95rem;
+  }
+  

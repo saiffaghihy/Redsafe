@@ -1,138 +1,100 @@
-/* === Reset & Base === */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #fff5f5;
-    color: #222;
-    line-height: 1.7;
-  }
-  
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  ul {
-    list-style: none;
-  }
-  
-  /* === Header & Nav === */
-  header {
-    position: sticky;
-    top: 0;
-    background-color: #c90000;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    z-index: 1000;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  }
-  
-  .logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-  }
-  
-  .nav-links {
-    display: flex;
-    gap: 1.2rem;
-    flex-wrap: wrap;
-  }
-  
-  .nav-links li a {
-    color: white;
-    font-weight: 500;
-    padding: 0.4rem 0.6rem;
-    border-radius: 4px;
-    transition: background 0.2s ease-in-out;
-  }
-  
-  .nav-links li a:hover,
-  .nav-links li a.active {
-    background-color: #ff3333;
-  }
-  
-  /* === Main Content === */
-  .container {
-    max-width: 1100px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-  }
-  
-  /* Intro Section */
-  .intro h1 {
-    color: #c90000;
-    font-size: 2.2rem;
-    text-align: center;
-    margin-bottom: 1.5rem;
-  }
-  
-  .intro p {
-    margin-bottom: 1rem;
-    font-size: 1.05rem;
-    text-align: justify;
-  }
-  
-  /* Pillars Section */
-  .pillars {
-    margin-top: 3rem;
-  }
-  
-  .pillars h2 {
-    font-size: 1.6rem;
-    color: #c90000;
-    margin-bottom: 2rem;
-    text-align: center;
-  }
-  
-  .pillar {
-    background-color: #fff;
-    border-left: 5px solid #c90000;
-    padding: 1.5rem 1.2rem;
-    margin-bottom: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
-    transition: transform 0.3s ease;
-  }
-  
-  .pillar:hover {
-    transform: scale(1.015);
-  }
-  
-  .pillar h3 {
-    color: #c90000;
-    margin-bottom: 0.8rem;
-    font-size: 1.3rem;
-  }
-  
-  .pillar p {
-    font-size: 1.05rem;
-    text-align: justify;
-  }
-  
-  /* === Footer === */
-  footer {
-    background-color: #c90000;
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
-    font-size: 0.95rem;
-    margin-top: 3rem;
-  }
-  
-  /* === Responsive Layout === */
-  @media (max-width: 768px) {
-    .nav-links {
-      flex-direction: column;
-      gap: 0.8rem;
-      padding-top: 1rem;
-    }
-  }
-  
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff5f5;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+header {
+  background-color: #b30000;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.page-title {
+  font-size: 2.5rem;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.navbar {
+  background-color: #cc0000;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #ffcccc;
+}
+
+main {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #b30000;
+  border-bottom: 2px solid #b30000;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+p, li {
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+footer {
+  background-color: #b30000;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  border-top: 3px solid #8c0000;
+}

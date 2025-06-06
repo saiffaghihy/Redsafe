@@ -1,114 +1,93 @@
-/* === Reset & Base === */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #fff5f5; /* light red tone */
-    color: #222;
-    line-height: 1.7;
-  }
-  
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  ul {
-    list-style: none;
-  }
-  
-  /* === Header & Nav === */
-  header {
-    position: sticky;
-    top: 0;
-    background-color: #c90000;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    z-index: 1000;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  }
-  
-  .logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-  }
-  
-  .nav-links {
-    display: flex;
-    gap: 1.2rem;
-    flex-wrap: wrap;
-  }
-  
-  .nav-links li a {
-    color: white;
-    font-weight: 500;
-    padding: 0.4rem 0.6rem;
-    border-radius: 4px;
-    transition: background 0.2s ease-in-out;
-  }
-  
-  .nav-links li a:hover,
-  .nav-links li a.active {
-    background-color: #ff3333;
-  }
-  
-  /* === Main Content === */
-  .container {
-    max-width: 1000px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-  }
-  
-  .intro h1 {
-    text-align: center;
-    color: #c90000;
-    font-size: 2rem;
-    margin-bottom: 2rem;
-  }
-  
-  .profile {
-    background-color: #fff;
-    border-left: 5px solid #c90000;
-    margin-bottom: 2rem;
-    padding: 1.5rem 1.2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
-  }
-  
-  .profile h2 {
-    color: #c90000;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .profile p {
-    font-size: 1.05rem;
-    text-align: justify;
-  }
-  
-  /* === Footer === */
-  footer {
-    background-color: #c90000;
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
-    font-size: 0.95rem;
-    margin-top: 3rem;
-  }
-  
-  /* === Responsive Adjustments === */
-  @media (max-width: 768px) {
-    .nav-links {
-      flex-direction: column;
-      gap: 0.8rem;
-      padding-top: 1rem;
-    }
-  }
-  
+/* General Page Layout */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff5f5;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: #b30000;
+  color: white;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.site-title {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+  background-color: #ff4d4d;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  background-color: #cc0000;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  margin: 0;
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.navbar li a:hover {
+  color: #ffcccc;
+  transform: scale(1.05);
+}
+
+/* Content Section */
+main.content {
+  padding: 2rem 10%;
+}
+
+h2 {
+  color: #b30000;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.person-section {
+  margin-bottom: 3rem;
+  padding: 1.5rem;
+  background-color: #ffeaea;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.person-section h3 {
+  color: #b30000;
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.person-section p {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #b30000;
+  color: white;
+  margin-top: 3rem;
+  font-size: 0.95rem;
+}
