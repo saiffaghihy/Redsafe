@@ -1,93 +1,64 @@
-/* General Page Layout */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #fff5f5;
-  color: #333;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
+/* us.css - Custom Styling for Us Page */
+
+.us-section {
+  background-color: #fff;
+  padding: 30px 35px;
+  border-radius: 20px;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  animation: fadeInUp 0.6s ease;
 }
 
-header {
-  position: sticky;
-  top: 0;
-  background-color: #b30000;
-  color: white;
-  z-index: 1000;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+.us-section:hover {
+  transform: translateY(-4px);
 }
 
-.site-title {
-  text-align: center;
-  padding: 1rem 0;
-  font-size: 2.5rem;
-  font-weight: bold;
-  background-color: #ff4d4d;
+.us-profile {
+  margin-bottom: 40px;
 }
 
-.navbar {
-  display: flex;
-  justify-content: center;
-  background-color: #cc0000;
-}
-
-.navbar ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  padding: 0.75rem 1rem;
-  margin: 0;
-}
-
-.navbar li a {
-  text-decoration: none;
-  color: white;
-  font-weight: 600;
-  transition: color 0.3s, transform 0.2s;
-}
-
-.navbar li a:hover {
-  color: #ffcccc;
-  transform: scale(1.05);
-}
-
-/* Content Section */
-main.content {
-  padding: 2rem 10%;
-}
-
-h2 {
-  color: #b30000;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.person-section {
-  margin-bottom: 3rem;
-  padding: 1.5rem;
-  background-color: #ffeaea;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.person-section h3 {
-  color: #b30000;
+.us-profile h2 {
   font-size: 1.5rem;
-  margin-bottom: 0.75rem;
+  color: #b01424;
+  margin-bottom: 10px;
 }
 
-.person-section p {
+.us-profile p {
   font-size: 1.1rem;
-  margin-bottom: 0.5rem;
+  line-height: 1.7;
+  margin-bottom: 18px;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #b30000;
-  color: white;
-  margin-top: 3rem;
-  font-size: 0.95rem;
+/* Image & Bio (optional if you add pictures later) */
+.us-profile img {
+  float: left;
+  margin-right: 20px;
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .us-section {
+    padding: 25px 20px;
+  }
+
+  .us-profile img {
+    float: none;
+    display: block;
+    margin: 0 auto 15px;
+  }
+
+  .us-profile h2 {
+    text-align: center;
+    font-size: 1.4rem;
+  }
+
+  .us-profile p {
+    text-align: center;
+    font-size: 1rem;
+  }
 }

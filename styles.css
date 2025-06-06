@@ -1,0 +1,213 @@
+/* styles.css - Global High-Quality Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom, #fff8f8, #fbe5e5);
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ======================== NAVIGATION ======================== */
+
+header.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(204, 31, 47, 0.95);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 40px;
+  z-index: 999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.4s ease;
+}
+
+.navbar .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px #770b0b;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.navbar .nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  padding: 6px 10px;
+  border-radius: 5px;
+}
+
+.navbar .nav-links li a:hover,
+.navbar .nav-links li a:focus {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffe3e3;
+}
+
+.navbar .nav-links li a.active {
+  background-color: #fff;
+  color: #b01313;
+}
+
+/* ======================== MAIN CONTENT ======================== */
+
+main.content {
+  padding: 120px 40px 60px;
+  max-width: 1000px;
+  margin: auto;
+  animation: fadeIn 0.8s ease-in;
+}
+
+section.page-header {
+  margin-bottom: 40px;
+  animation: slideUp 0.6s ease;
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  color: #cc1f2f;
+  border-bottom: 3px solid #cc1f2f;
+  display: inline-block;
+  padding-bottom: 8px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+/* ======================== SECTIONS ======================== */
+
+section {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 25px 30px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  margin-bottom: 40px;
+  animation: fadeInUp 0.5s ease both;
+}
+
+section h2 {
+  font-size: 1.7rem;
+  color: #b01424;
+  margin-bottom: 10px;
+}
+
+section h3 {
+  font-size: 1.3rem;
+  color: #99121d;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+section p {
+  font-size: 1.1rem;
+  margin-bottom: 14px;
+  line-height: 1.7;
+}
+
+/* ======================== AUDIO PODCASTS ======================== */
+
+.podcast-episode {
+  margin-bottom: 40px;
+}
+
+audio {
+  width: 100%;
+  margin-top: 10px;
+  outline: none;
+  border-radius: 6px;
+}
+
+/* ======================== IFRAME FORMS ======================== */
+
+iframe {
+  width: 100%;
+  border: none;
+  margin-top: 30px;
+  border-radius: 10px;
+  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.1);
+}
+
+/* ======================== ANIMATIONS ======================== */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ======================== RESPONSIVE DESIGN ======================== */
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 20px;
+  }
+
+  .navbar .nav-links {
+    flex-direction: column;
+    width: 100%;
+    padding-top: 10px;
+  }
+
+  .navbar .nav-links li {
+    width: 100%;
+  }
+
+  .navbar .nav-links li a {
+    width: 100%;
+    display: block;
+    padding: 10px;
+    font-size: 1.1rem;
+  }
+
+  main.content {
+    padding: 100px 20px 40px;
+  }
+}

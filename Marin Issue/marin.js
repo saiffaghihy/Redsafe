@@ -1,20 +1,20 @@
-// sources.js - Animated Reveal for Sources Page
+// marin.js - Animated Reveal for Marin’s Issue Page
 
 document.addEventListener("DOMContentLoaded", () => {
-  revealSources(".sources-section h2, .sources-section ul li, .source-box", 120);
+  revealMarinContent(".marin-section h2, .marin-section h3, .marin-section p, .marin-fact", 140);
 });
 
 /**
- * Gradually fade in source items with staggered timing
- * @param {string} selector - Elements to reveal
- * @param {number} delay - Delay between each in ms
+ * Animates local issue content with staggered entrance
+ * @param {string} selector - Items to animate
+ * @param {number} delay - Stagger time in ms
  */
-function revealSources(selector, delay = 120) {
+function revealMarinContent(selector, delay = 140) {
   const elements = document.querySelectorAll(selector);
 
   elements.forEach((el, index) => {
     el.style.opacity = 0;
-    el.style.transform = "translateY(20px)";
+    el.style.transform = "translateY(25px)";
     el.style.transition = `opacity 0.6s ease ${index * delay}ms, transform 0.6s ease ${index * delay}ms`;
 
     setTimeout(() => {

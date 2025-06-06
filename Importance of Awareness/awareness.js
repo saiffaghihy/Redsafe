@@ -1,33 +1,25 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const fadeInElements = document.querySelectorAll(".fade-in");
+// awareness.js - Animated Reveal for Awareness Page
 
-  const options = {
-    threshold: 0.3,
-  };
-
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        observer.unobserve(entry.target);
-      }
-    });
-  }, options);
-
-  fadeInElements.forEach(el => {
-    observer.observe(el);
-  });
-
-  // Smooth scrolling for internal links
-  const navLinks = document.querySelectorAll("nav a[href^='#']");
-  navLinks.forEach(link => {
-    link.addEventListener("click", function (e) {
-      e.preventDefault();
-      const targetId = this.getAttribute("href").substring(1);
-      const targetElement = document.getElementById(targetId);
-      if (targetElement) {
-        targetElement.scrollIntoView({ behavior: "smooth" });
-      }
-    });
-  });
+document.addEventListener("DOMContentLoaded", () => {
+  revealAwarenessContent(".awareness-section h2, .awareness-section h3, .awareness-section p, .awareness-callout", 130);
 });
+
+/**
+ * Animates awareness-related elements to emphasize impact
+ * @param {string} selector - Content to animate
+ * @param {number} delay - Time between reveals in ms
+ */
+function revealAwarenessContent(selector, delay = 130) {
+  const elements = document.querySelectorAll(selector);
+
+  elements.forEach((el, index) => {
+    el.style.opacity = 0;
+    el.style.transform = "translateY(20px)";
+    el.style.transition = `opacity 0.6s ease ${index * delay}ms, transform 0.6s ease ${index * delay}ms`;
+
+    setTimeout(() => {
+      el.style.opacity = 1;
+      el.style.transform = "translateY(0)";
+    }, 100);
+  });
+}

@@ -1,15 +1,15 @@
-// solutions.js - Animated Reveal for Solutions Page
+// fundraisers.js - Staggered Fundraiser Reveal
 
 document.addEventListener("DOMContentLoaded", () => {
-  revealSolutions(".solutions-section h2, .solutions-section h3, .solutions-section p, .solution-step", 150);
+  animateFundraiserContent(".fundraisers-section h2, .fundraisers-section h3, .fundraisers-section p, .fundraiser-card", 150);
 });
 
 /**
- * Animates each solution block with staggered entrance
- * @param {string} selector - Element types to reveal
- * @param {number} delay - Delay between animations (ms)
+ * Fades in fundraiser elements with staggered animation
+ * @param {string} selector - Items to animate
+ * @param {number} delay - Milliseconds between each animation step
  */
-function revealSolutions(selector, delay = 150) {
+function animateFundraiserContent(selector, delay = 150) {
   const elements = document.querySelectorAll(selector);
 
   elements.forEach((el, index) => {
