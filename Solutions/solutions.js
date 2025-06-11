@@ -1,15 +1,15 @@
-// solutions.js - Animated Reveal for Solutions Page
+// solutions.js - Animate Solutions page content
 
 document.addEventListener("DOMContentLoaded", () => {
-  revealSolutions(".solutions-section h2, .solutions-section h3, .solutions-section p, .solution-step", 150);
+  animateElements(".solutions-section h2, .solutions-section h3, .solutions-section p, .solution-step", 150);
 });
 
 /**
- * Animates each solution block with staggered entrance
- * @param {string} selector - Element types to reveal
- * @param {number} delay - Delay between animations (ms)
+ * Animate multiple elements with staggered fade-up effect
+ * @param {string} selector - CSS selector string
+ * @param {number} delay - Delay between animations in ms
  */
-function revealSolutions(selector, delay = 150) {
+function animateElements(selector, delay = 150) {
   const elements = document.querySelectorAll(selector);
 
   elements.forEach((el, index) => {

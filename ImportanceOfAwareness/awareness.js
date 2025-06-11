@@ -1,15 +1,15 @@
-// awareness.js - Animated Reveal for Awareness Page
+// awareness.js - Animate Awareness page content
 
 document.addEventListener("DOMContentLoaded", () => {
-  revealAwarenessContent(".awareness-section h2, .awareness-section h3, .awareness-section p, .awareness-callout", 130);
+  animateElements(".awareness-section h2, .awareness-section h3, .awareness-section p, .awareness-callout", 130);
 });
 
 /**
- * Animates awareness-related elements to emphasize impact
- * @param {string} selector - Content to animate
- * @param {number} delay - Time between reveals in ms
+ * Animate multiple elements with staggered fade-up effect
+ * @param {string} selector - CSS selector string
+ * @param {number} delay - Delay between animations in ms
  */
-function revealAwarenessContent(selector, delay = 130) {
+function animateElements(selector, delay = 130) {
   const elements = document.querySelectorAll(selector);
 
   elements.forEach((el, index) => {

@@ -1,15 +1,15 @@
-// sources.js - Animated Reveal for Sources Page
+// sources.js - Animate Sources page content
 
 document.addEventListener("DOMContentLoaded", () => {
-  revealSources(".sources-section h2, .sources-section ul li, .source-box", 120);
+  animateElements(".sources-section h2, .sources-section ul li, .source-box", 120);
 });
 
 /**
- * Gradually fade in source items with staggered timing
- * @param {string} selector - Elements to reveal
- * @param {number} delay - Delay between each in ms
+ * Animate multiple elements with staggered fade-up effect
+ * @param {string} selector - CSS selector string
+ * @param {number} delay - Delay between animations in ms
  */
-function revealSources(selector, delay = 120) {
+function animateElements(selector, delay = 120) {
   const elements = document.querySelectorAll(selector);
 
   elements.forEach((el, index) => {

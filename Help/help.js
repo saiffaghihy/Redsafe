@@ -1,15 +1,15 @@
-// help.js - Animated Hotline & Support Reveal
+// help.js - Animate Help page content
 
 document.addEventListener("DOMContentLoaded", () => {
-  revealHelpResources(".help-section h2, .help-section h3, .help-section p, .help-section ul li, .help-emergency", 100);
+  animateElements(".help-section h2, .help-section h3, .help-section p, .help-section ul li, .help-emergency", 100);
 });
 
 /**
- * Fade in hotline and support content for clarity and calm
- * @param {string} selector - All elements to animate
- * @param {number} delay - Delay between items in ms
+ * Animate multiple elements with staggered fade-up effect
+ * @param {string} selector - CSS selector string
+ * @param {number} delay - Delay between each animation in ms
  */
-function revealHelpResources(selector, delay = 100) {
+function animateElements(selector, delay = 100) {
   const elements = document.querySelectorAll(selector);
 
   elements.forEach((el, index) => {

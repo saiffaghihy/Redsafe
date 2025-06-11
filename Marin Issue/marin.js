@@ -1,15 +1,15 @@
-// marin.js - Animated Reveal for Marin’s Issue Page
+// marin.js - Animate Marin Issue page content
 
 document.addEventListener("DOMContentLoaded", () => {
-  revealMarinContent(".marin-section h2, .marin-section h3, .marin-section p, .marin-fact", 140);
+  animateElements(".marin-section h2, .marin-section h3, .marin-section p, .marin-fact", 140);
 });
 
 /**
- * Animates local issue content with staggered entrance
- * @param {string} selector - Items to animate
- * @param {number} delay - Stagger time in ms
+ * Animate multiple elements with staggered fade-up effect
+ * @param {string} selector - CSS selector string
+ * @param {number} delay - Delay between animations in ms
  */
-function revealMarinContent(selector, delay = 140) {
+function animateElements(selector, delay = 140) {
   const elements = document.querySelectorAll(selector);
 
   elements.forEach((el, index) => {

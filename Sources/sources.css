@@ -1,52 +1,53 @@
-/* sources.css - Styling for Sources Page */
+/* sources.css - Content styling for Sources page */
 
 .sources-section {
   background-color: #fff;
-  padding: 30px 35px;
-  border-radius: 20px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
-  animation: fadeInUp 0.6s ease;
-  transition: transform 0.3s ease;
-}
-
-.sources-section:hover {
-  transform: translateY(-4px);
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  animation: fadeInUp 0.7s ease;
+  max-width: 900px;
+  margin: auto;
+  color: #444;
 }
 
 .sources-section h2 {
-  font-size: 1.6rem;
-  color: #b01424;
-  margin-bottom: 16px;
+  color: #b0131c;
+  font-size: 1.8rem;
+  margin-bottom: 18px;
 }
 
 .sources-section ul {
   list-style-type: none;
   padding-left: 0;
+  margin-bottom: 30px;
 }
 
 .sources-section li {
   font-size: 1.05rem;
-  margin-bottom: 12px;
   line-height: 1.7;
+  margin-bottom: 12px;
   word-wrap: break-word;
 }
 
-/* Hyperlink styling */
+/* Links styling */
 .sources-section a {
   color: #2a4edc;
   text-decoration: underline;
   transition: color 0.3s ease;
 }
 
-.sources-section a:hover {
+.sources-section a:hover,
+.sources-section a:focus {
   color: #102ab2;
+  outline: none;
 }
 
-/* Callout for grouped sources */
+/* Highlight box for grouped sources */
 .source-box {
   background-color: #f1f5ff;
-  border-left: 5px solid #4c5eff;
-  padding: 16px 22px;
+  border-left: 6px solid #4c5eff;
+  padding: 15px 20px;
   margin: 20px 0;
   border-radius: 10px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
@@ -60,7 +61,7 @@
   }
 
   .sources-section h2 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
 
   .sources-section li,

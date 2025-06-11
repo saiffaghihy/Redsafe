@@ -1,15 +1,15 @@
-// us.js - Interactive Profile Reveal for Us Page
+// us.js - Animate Us page content
 
 document.addEventListener("DOMContentLoaded", () => {
-  staggerFadeIn(".us-profile", 200);
+  animateElements(".us-section h2, .us-section h3, .us-section p", 140);
 });
 
 /**
- * Fade in profile blocks one by one
- * @param {string} selector - Container elements
- * @param {number} delay - Delay between each in ms
+ * Animate multiple elements with staggered fade-up effect
+ * @param {string} selector - CSS selector string
+ * @param {number} delay - Delay between animations in ms
  */
-function staggerFadeIn(selector, delay = 200) {
+function animateElements(selector, delay = 140) {
   const elements = document.querySelectorAll(selector);
 
   elements.forEach((el, index) => {
@@ -20,6 +20,6 @@ function staggerFadeIn(selector, delay = 200) {
     setTimeout(() => {
       el.style.opacity = 1;
       el.style.transform = "translateY(0)";
-    }, 50);
+    }, 100);
   });
 }

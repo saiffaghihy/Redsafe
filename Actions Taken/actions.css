@@ -1,51 +1,47 @@
-/* actions.css - Custom Styling for Actions Taken Page */
+/* actions.css - Content styling for Actions Taken page */
 
 .actions-section {
   background-color: #fff;
-  padding: 30px 35px;
-  border-radius: 20px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
-  transition: transform 0.3s ease;
-  animation: fadeInUp 0.6s ease;
-}
-
-.actions-section:hover {
-  transform: translateY(-4px);
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  animation: fadeInUp 0.7s ease;
+  max-width: 900px;
+  margin: auto;
+  color: #444;
 }
 
 .actions-section h2 {
-  font-size: 1.6rem;
-  margin-top: 30px;
-  margin-bottom: 12px;
-  color: #b01424;
+  color: #b0131c;
+  font-size: 1.8rem;
+  margin-bottom: 18px;
 }
 
 .actions-section p {
   font-size: 1.1rem;
+  line-height: 1.7;
   margin-bottom: 18px;
-  line-height: 1.75;
 }
 
-/* Optional: bullet list styling */
 .actions-section ul {
   margin-left: 20px;
-  margin-bottom: 25px;
-  list-style: disc;
+  margin-bottom: 24px;
+  list-style-type: disc;
 }
 
 .actions-section ul li {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   font-size: 1.05rem;
 }
 
-/* Responsive */
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .actions-section {
     padding: 25px 20px;
   }
 
   .actions-section h2 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
 
   .actions-section p,

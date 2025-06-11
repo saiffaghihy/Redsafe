@@ -1,15 +1,15 @@
-// fundraisers.js - Staggered Fundraiser Reveal
+// fundraisers.js - Animate Fundraisers page content
 
 document.addEventListener("DOMContentLoaded", () => {
-  animateFundraiserContent(".fundraisers-section h2, .fundraisers-section h3, .fundraisers-section p, .fundraiser-card", 150);
+  animateElements(".fundraisers-section h2, .fundraisers-section h3, .fundraisers-section p, .fundraiser-card", 150);
 });
 
 /**
- * Fades in fundraiser elements with staggered animation
- * @param {string} selector - Items to animate
- * @param {number} delay - Milliseconds between each animation step
+ * Animate multiple elements with staggered fade-up effect
+ * @param {string} selector - CSS selector string
+ * @param {number} delay - Delay between each animation in ms
  */
-function animateFundraiserContent(selector, delay = 150) {
+function animateElements(selector, delay = 150) {
   const elements = document.querySelectorAll(selector);
 
   elements.forEach((el, index) => {
