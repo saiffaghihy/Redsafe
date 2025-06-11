@@ -41,11 +41,21 @@ body, html {
 
 /* === NAVBAR === */
 
-.navbar {
+header {
   position: fixed;
-  top: 70px; /* below page title */
+  top: 0; /* below page title */
   left: 0;
   width: 100%;
+  z-index: 1;
+}
+
+header > img {
+  height: 50px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.navbar {
   height: 55px;
   background-color: #b0131c; /* Slightly darker red */
   display: flex;

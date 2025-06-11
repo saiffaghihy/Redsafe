@@ -1,0 +1,62 @@
+/* marin.css - Content styling for Marin Issue page */
+
+.marin-section {
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  animation: fadeInUp 0.7s ease;
+  max-width: 900px;
+  margin: auto;
+  color: #444;
+}
+
+.marin-section h2 {
+  color: #b0131c;
+  font-size: 1.8rem;
+  margin-bottom: 18px;
+}
+
+.marin-section h3 {
+  color: #7a0f11;
+  font-size: 1.4rem;
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+.marin-section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+/* Fact or warning box */
+.marin-fact {
+  background-color: #fff3f3;
+  border-left: 6px solid #cc1f2f;
+  padding: 15px 20px;
+  margin: 25px 0;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  font-size: 1.05rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .marin-section {
+    padding: 25px 20px;
+  }
+
+  .marin-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .marin-section h3 {
+    font-size: 1.25rem;
+  }
+
+  .marin-section p,
+  .marin-fact {
+    font-size: 1rem;
+  }
+}
